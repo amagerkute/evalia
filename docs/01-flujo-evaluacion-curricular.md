@@ -34,6 +34,15 @@ Brechas respecto del flujo 01:
 5. **No hay revisión humana en la corrección** ni estados de publicación o versionado.
 6. **Persistencia en `localStorage`**: sirve para una demo, pero no para datos de menores.
 
+Hallazgos al recorrer la POC en navegador (28-09-2026):
+
+7. **El tutor revela respuestas.** `sendFillChat()` (`index.html:2364`) elige al azar entre 5 textos fijos. Varios contienen la respuesta: el primero afirma que la membrana plasmática controla el intercambio de sustancias, que es exactamente la respuesta de la pregunta 1. En una demo esto contradice la propuesta central ("guía, no da la respuesta"). Antes de mostrarla a terceros conviene reemplazarlos por respuestas socráticas guionadas por pregunta.
+8. **Reportes no se muestran.** `#page-reports` tiene `style="display:none"` fijo en el HTML (`index.html:1428`), lo que anula la clase `.active`: el menú marca "Reportes" pero la pantalla queda en blanco.
+9. **La entrega no genera nada.** `submitTest()` muestra un `alert` y vuelve al inicio: no hay corrección, resultado ni feedback (fases G y H del flujo).
+10. **Datos de ejemplo inconsistentes.** El inicio muestra "Química básica · 2º ESO" (nomenclatura de España); el editor, "Biología · 3º Secundaria"; el esquema, 12 preguntas de biología celular; la prueba, 5 preguntas; y `share.html`, un "Examen parcial de Biología y Matemáticas" de 15 preguntas. Para una demo en CL/CR conviene un solo caso coherente con curso y OA reales.
+11. **Acceso del estudiante sin identidad.** `share.html` pide solo nombre y clase en texto libre, sin cuenta ni consentimiento.
+12. **La landing (`evalia-sales.html`) ya promete "alineadas al currículo escolar"** y muestra métricas como "500+ docentes" y "95 % satisfacción". Revisar esas cifras antes de publicarla con dominio propio.
+
 **Cambio mínimo en el demo** (para que Ariel pueda avanzar en local): reemplazar los chips por un selector encadenado *País → Curso → Asignatura → Unidad/Eje → Objetivos*, alimentado por un JSON de piloto (ver `02-modelo-curricular-cl-cr.md` §5), y mostrar en cada bloque del esquema el objetivo que evalúa.
 
 ## 3. Pasos del flujo
