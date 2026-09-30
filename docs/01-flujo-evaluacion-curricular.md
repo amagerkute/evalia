@@ -43,6 +43,8 @@ Hallazgos al recorrer la POC en navegador (28-09-2026):
 11. **Acceso del estudiante sin identidad.** `share.html` pide solo nombre y clase en texto libre, sin cuenta ni consentimiento.
 12. **La landing (`evalia-sales.html`) ya promete "alineadas al currículo escolar"** y muestra métricas como "500+ docentes" y "95 % satisfacción". Revisar esas cifras antes de publicarla con dominio propio.
 
+> **Nota sobre ramas (30-09-2026).** El diagnóstico anterior corresponde a `main` de `pengyilabs/evalia`. La rama `feat/metis-iterations` (15-sep, 15 commits, sin fusionar) implementa gran parte de `metis-iteration-1.md`: paso de configuración del agente y rúbrica, activación por pregunta, niveles de ayuda 1–3, historial de conversación, autorreflexión, "Vista padre", reportes ampliados y una sección "próximamente". Con ella quedan cubiertas en la UI las brechas 4 y parte de 2. Los puntos 7, 8 y 9 **siguen presentes en esa rama**, y el 7 aparece también en un texto nuevo (`index.html:2959` de esa rama). Conviene fusionar primero `feat/metis-iterations` y aplicar sobre ella los cambios del flujo 01.
+
 **Cambio mínimo en el demo** (para que Ariel pueda avanzar en local): reemplazar los chips por un selector encadenado *País → Curso → Asignatura → Unidad/Eje → Objetivos*, alimentado por un JSON de piloto (ver `02-modelo-curricular-cl-cr.md` §5), y mostrar en cada bloque del esquema el objetivo que evalúa.
 
 ## 3. Pasos del flujo
