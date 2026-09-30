@@ -2,7 +2,7 @@
 
 > Documento de trabajo · v2 · 28-09-2026
 > Diagrama editable: [`flujos/Evalia_flujo_01_v2.drawio`](flujos/Evalia_flujo_01_v2.drawio) (abrir en [app.diagrams.net](https://app.diagrams.net) o con la extensión Draw.io de VS Code)
-> Reemplaza la versión 1 (`Evalia_flujo_01_curriculo_evaluacion.drawio`, que tenía 26 componentes y 16 transiciones).
+> Reemplaza la versión 1 ([`flujos/Evalia_flujo_01_v1.drawio`](flujos/Evalia_flujo_01_v1.drawio), que tenía 26 componentes y 16 transiciones).
 
 ## 1. Qué cambia respecto de la v1
 
